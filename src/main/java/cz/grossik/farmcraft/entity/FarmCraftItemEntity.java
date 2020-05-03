@@ -20,6 +20,9 @@ public class FarmCraftItemEntity extends ItemEntity {
 		super(p_i50217_1_, p_i50217_2_);
 		this.setPosition(pos.getX(), pos.getY(), pos.getZ());
 		this.setItem(stack);
+		this.lifespan = (stack.getItem() == null ? 6000 : stack.getEntityLifespan(p_i50217_2_));
+		this.rotationYaw = this.rand.nextFloat() * 360.0F;
+		this.setMotion(this.rand.nextDouble() * 0.2D - 0.1D, 0.2D, this.rand.nextDouble() * 0.2D - 0.1D);
 	}
 	   
 	@Override

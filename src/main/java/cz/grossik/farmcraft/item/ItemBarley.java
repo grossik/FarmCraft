@@ -21,6 +21,12 @@ public class ItemBarley extends Item {
 	
 	@Override
 	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
-		return new FarmCraftItemEntity(EntityInit.ITEM_ENTITY.get(), world, location.getPosition());
+		return new FarmCraftItemEntity(EntityInit.ITEM_ENTITY.get(), world, location.getPosition(), itemstack);
 	}
+	
+	/*@Override
+	public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+		return true;
+	}*/
+	
 }

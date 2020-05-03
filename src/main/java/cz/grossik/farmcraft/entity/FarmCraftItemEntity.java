@@ -3,6 +3,7 @@ package cz.grossik.farmcraft.entity;
 import cz.grossik.farmcraft.init.ItemInit;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.math.BlockPos;
@@ -15,10 +16,10 @@ public class FarmCraftItemEntity extends ItemEntity {
 		super(p_i50217_1_, p_i50217_2_);
 	}
 	
-	public FarmCraftItemEntity(EntityType<? extends ItemEntity> p_i50217_1_, World p_i50217_2_, BlockPos pos) {
+	public FarmCraftItemEntity(EntityType<? extends ItemEntity> p_i50217_1_, World p_i50217_2_, BlockPos pos, ItemStack stack) {
 		super(p_i50217_1_, p_i50217_2_);
-		System.err.println(pos);
 		this.setPosition(pos.getX(), pos.getY(), pos.getZ());
+		this.setItem(stack);
 	}
 	   
 	@Override
@@ -38,4 +39,9 @@ public class FarmCraftItemEntity extends ItemEntity {
 		}
 		super.tick();
 	}*/
+	
+	@Override
+	public void onCollideWithPlayer(PlayerEntity entityIn) {
+		
+	}
 }

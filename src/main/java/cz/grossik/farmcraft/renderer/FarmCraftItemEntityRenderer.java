@@ -24,6 +24,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @SuppressWarnings("deprecation")
+@OnlyIn(Dist.CLIENT)
 public class FarmCraftItemEntityRenderer extends EntityRenderer<FarmCraftItemEntity> {
    private final net.minecraft.client.renderer.ItemRenderer itemRenderer;
    private final Random random = new Random();

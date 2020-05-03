@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "farmcraft:blocks/hops_stage_3"
+    }
+}

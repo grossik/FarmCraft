@@ -1,0 +1,18 @@
+{
+    "variants": {
+        "age=0,half=lower": { "model": "farmcraft:block/crop_hops_stage0" },
+        "age=1,half=lower": { "model": "farmcraft:block/crop_hops_stage0" },
+        "age=2,half=lower": { "model": "farmcraft:block/crop_hops_stage1" },
+        "age=3,half=lower": { "model": "farmcraft:block/crop_hops_stage2" },
+        "age=4,half=lower": { "model": "farmcraft:block/crop_hops_stage2" },
+        "age=5,half=lower": { "model": "farmcraft:block/crop_hops_stage2" },
+        "age=6,half=lower": { "model": "farmcraft:block/crop_hops_stage2" },
+        "age=7,half=lower": { "model": "farmcraft:block/crop_hops_stage3" },
+        
+        "age=3,half=upper": { "model": "farmcraft:block/crop_hops_stage0" },
+        "age=4,half=upper": { "model": "farmcraft:block/crop_hops_stage1" },
+        "age=5,half=upper": { "model": "farmcraft:block/crop_hops_stage1" },
+        "age=6,half=upper": { "model": "farmcraft:block/crop_hops_stage2" },
+        "age=7,half=upper": { "model": "farmcraft:block/crop_hops_stage3" }
+    }
+}

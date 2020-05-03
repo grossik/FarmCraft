@@ -1,0 +1,14 @@
+{
+	"itemGroup.farmcrafttab": "FarmCraft",
+
+	"item.farmcraft.juice_glass": "Glass for Juice",
+	"item.farmcraft.juice_carrot": "Carrot juice",
+	"item.farmcraft.seed_tomato": "Tomato seed",
+	"item.farmcraft.tomato": "Tomato",
+	"item.farmcraft.wooden_stick": "Wooden stick",
+	"item.farmcraft.juicer": "Juicer",
+	"item.farmcraft.scarecrow": "Scarecrow",
+	"item.farmcraft.strawberry": "Strawberry",
+	
+	"farmcraft.container.juicer": "Juicer"
+}

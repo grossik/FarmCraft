@@ -1,0 +1,56 @@
+{
+	"textures": {
+		"particle": "farmcraft:blocks/wooden_stick",
+		"crop": "farmcraft:blocks/wooden_stick"
+	},
+	"elements": [
+		{
+			"from": [12, -1, 4],
+			"to": [13, 13, 5],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#crop"}
+			}
+		},
+		{
+			"from": [12, -1, 11],
+			"to": [13, 13, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#crop"}
+			}
+		},
+		{
+			"from": [4, -1, 4],
+			"to": [5, 13, 5],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#crop"}
+			}
+		},
+		{
+			"from": [4, -1, 11],
+			"to": [5, 13, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#crop"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#crop"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#crop"}
+			}
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+    "multipart": [
+    	{ 
+    		"apply": { "model": "farmcraft:block/wooden_stick" }
+		},
+        {   "when": { "age": "0", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage0" }
+        },
+        {   "when": { "age": "1", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage0" }
+        },
+        {   "when": { "age": "2", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage1" }
+        },
+        {   "when": { "age": "3", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage1" }
+        },
+        {   "when": { "age": "4", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage2" }
+        },
+        {   "when": { "age": "5", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage2" }
+        },
+        {   "when": { "age": "6", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage2" }
+        },
+        {   "when": { "age": "7", "has_seed": "true", "seed": "1" },
+            "apply": { "model": "farmcraft:block/crop_tomato_stage3" }
+        }
+    ]
+}

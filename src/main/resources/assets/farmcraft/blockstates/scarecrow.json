@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "facing=south,half=lower": { "model": "farmcraft:block/scarecrow", "y": 180  },
+        "facing=north,half=lower": { "model": "farmcraft:block/scarecrow", "y": 0 },  
+        "facing=west,half=lower":  { "model": "farmcraft:block/scarecrow", "y": 270},
+        "facing=east,half=lower":  { "model": "farmcraft:block/scarecrow", "y": 90 },
+        
+        "facing=south,half=upper": { "model": "farmcraft:block/scarecrow_top", "y": 180  },
+        "facing=north,half=upper": { "model": "farmcraft:block/scarecrow_top", "y": 0 },
+        "facing=west,half=upper":  { "model": "farmcraft:block/scarecrow_top", "y": 270 },
+        "facing=east,half=upper":  { "model": "farmcraft:block/scarecrow_top", "y": 90 }
+    }
+}

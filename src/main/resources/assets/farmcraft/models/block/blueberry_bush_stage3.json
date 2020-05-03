@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "farmcraft:blocks/blueberry_stage_3"
+    }
+}

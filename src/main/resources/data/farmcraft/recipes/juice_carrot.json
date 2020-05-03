@@ -1,0 +1,9 @@
+{
+  "type": "farmcraft:juicer",
+  "ingredient": {
+    "item": "minecraft:carrot"
+  },
+  "result": "farmcraft:juice_carrot",
+  "experience": 0.0,
+  "cookingtime": 200
+}

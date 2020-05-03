@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "farmcraft:blocks/strawberry_stage_0"
+    }
+}

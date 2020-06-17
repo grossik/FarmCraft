@@ -208,7 +208,7 @@ public class ExampleEntity extends AmbientEntity {
          
          if(this.hasScarecrow(blockpos)) {
 		   	  if (this.world.getBlockState(blockpos1).isNormalCube(this.world, blockpos)) {
-		          if (this.rand.nextInt(50) == 0) {
+		          if(this.rand.nextInt(50) == 0) {
 		        	  this.rotationYawHead = (float)this.rand.nextInt(360);
 		          }  
 			  }

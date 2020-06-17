@@ -225,10 +225,13 @@ public class JuicerTileEntity extends LockableTileEntity implements IRecipeHolde
              if (!(blockstate.getBlock() instanceof JuicerBlock)) {
                  return;
               }
-	         if(itemstack.getItem() != ItemInit.juice_glass.get()) {
-	             blockstate = blockstate.with(JuicerBlock.HAS_BOTTLE, false);
-	         } else {
+             
+	         if(itemstack.getItem() == ItemInit.juice_glass.get()) {
 	        	 blockstate = blockstate.with(JuicerBlock.HAS_BOTTLE, true);
+	         } else if(this.items.getStackInSlot(2).isEmpty() == false) {
+	        	 blockstate = blockstate.with(JuicerBlock.HAS_BOTTLE, true);
+	         } else {
+	        	 blockstate = blockstate.with(JuicerBlock.HAS_BOTTLE, false);
 	         }
 	         
 	         this.world.setBlockState(this.pos, blockstate, 3);
@@ -237,10 +240,6 @@ public class JuicerTileEntity extends LockableTileEntity implements IRecipeHolde
 	      if (flag1) {
 	    	  this.markDirty();
 	      }
-	      
-	      
-	      //animation
-	      
 	   }
 
 	   protected boolean canSmelt(@Nullable IRecipe<?> recipeIn) {

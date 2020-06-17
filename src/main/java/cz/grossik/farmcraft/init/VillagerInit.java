@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -14,6 +15,8 @@ import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 
 import cz.grossik.farmcraft.Main;
+import cz.grossik.farmcraft.block.BoilingBlock;
+import cz.grossik.farmcraft.multiblock.BoilingPartIndex;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.merchant.villager.VillagerProfession;
@@ -90,6 +93,13 @@ public class VillagerInit {
     }
     
     private static Set<BlockState> getAllStates(Block block) {
-        return ImmutableSet.copyOf(block.getStateContainer().getValidStates());
+		return ImmutableSet.copyOf(block.getStateContainer().getValidStates().stream().filter(blockState -> {
+			if(blockState.has(BoilingBlock.FORMED)) {
+				if(blockState.get(BoilingBlock.FORMED) == BoilingPartIndex.P000) {
+					return true;
+				}
+			}
+			return false;
+		}).collect(Collectors.toList()));
     }
 }

@@ -20,7 +20,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BlockInit {	
 	public static class FarmCraftMaterial {
 		public static final Material WOODEN_STICK_MATERIAL = (new Material.Builder(MaterialColor.FOLIAGE)).doesNotBlockMovement().notSolid().build();
-		//public static final Material BEER = (new Material.Builder(MaterialColor.WATER)).doesNotBlockMovement().notOpaque().notSolid().pushDestroys().replaceable().liquid().build();
+		//public static final Material MULTIBLOCK_MATERIAL = (new Material.Builder(MaterialColor.IRON))..notSolid().build();
+
 	}
 	
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Main.MOD_ID);

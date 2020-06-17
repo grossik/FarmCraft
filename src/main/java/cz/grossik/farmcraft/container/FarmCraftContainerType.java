@@ -44,17 +44,6 @@ public class FarmCraftContainerType {
 		ScreenManager.registerFactory(JUICER.get(), JuicerScreen::new);
 		ScreenManager.registerFactory(BOILING.get(), BoilingScreen::new);
 	}
-	
-    private static <C extends Container> ContainerType<C> register(ResourceLocation name, ContainerType.IFactory<C> containerFactory) {
-        ContainerType<C> type = new ContainerType<>(containerFactory);
-        return register(name, type);
-    }
-
-    private static <C extends Container> ContainerType<C> register(ResourceLocation name, ContainerType<C> containerType) {
-        containerType.setRegistryName(name.getNamespace());
-        ForgeRegistries.CONTAINERS.register(containerType);
-        return containerType;
-    }
     
     /*private static <T extends Container> ContainerType<T> register(ResourceLocation key, ContainerType.IFactory<T> factory) {
     	return Registry.register(Registry.MENU, key, new ContainerType<>(factory));

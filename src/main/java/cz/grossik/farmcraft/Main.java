@@ -19,6 +19,11 @@ import net.minecraft.world.gen.feature.jigsaw.JigsawPiece;
 import net.minecraft.world.gen.feature.jigsaw.SingleJigsawPiece;
 import net.minecraft.world.gen.feature.jigsaw.JigsawPattern.PlacementBehaviour;
 import net.minecraft.world.gen.feature.structure.PlainsVillagePools;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraftforge.client.model.obj.OBJModel;
+import net.minecraftforge.client.model.obj.OBJModel.ModelSettings;
 import net.minecraftforge.common.BasicTrade;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
@@ -57,6 +62,7 @@ import cz.grossik.farmcraft.init.VillagerInit;
 import cz.grossik.farmcraft.recipe.FarmCraftRecipeType;
 import cz.grossik.farmcraft.renderer.ExampleEntityRender;
 import cz.grossik.farmcraft.renderer.FarmCraftItemEntityRenderer;
+import cz.grossik.farmcraft.renderer.TileEntityBoilingRenderer;
 import cz.grossik.farmcraft.renderer.TileEntityJuicerRenderer;
 import cz.grossik.farmcraft.tileentity.FarmCraftTileEntityTypes;
 
@@ -91,7 +97,7 @@ public class Main {
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);                
     }
-
+    
     @SubscribeEvent
 	public void setup(FMLCommonSetupEvent event){   
     	VillagerInit.init();
@@ -119,28 +125,12 @@ public class Main {
     		}
     	}
     }
-    
-    /*@SubscribeEvent
-    public void entityJoin(EntityJoinWorldEvent event) {
-    	if(event.getEntity() instanceof ItemEntity) {
-    		System.err.println("Called dsadsa dsa");
-    		ItemEntity itemEntity = (ItemEntity) event.getEntity();
-    		ItemStack itemStack = itemEntity.getItem();
-    		if(itemStack.getItem() == ItemInit.hops_item.get()) {
-    			BlockPos pos = new BlockPos(itemEntity);
-    			if(itemEntity.getEntityWorld().getBlockState(pos).getMaterial() == Material.WATER) {
-    				ItemStack newItemStack = new ItemStack(Items.DIAMOND);
-    				ItemEntity newItem = new ItemEntity(itemEntity.getEntityWorld(), itemEntity.getPosX(), itemEntity.getPosY(), itemEntity.getPosZ(), newItemStack);
-    				itemEntity.getEntityWorld().addEntity(newItem);
-    			}
-    		}
-    	}
-    }*/
 
     @SubscribeEvent
     public void doClientStuff(FMLClientSetupEvent event) {
     	ClientRegistry.bindTileEntityRenderer(FarmCraftTileEntityTypes.juicer.get(), TileEntityJuicerRenderer::new);
-    	
+    	//ClientRegistry.bindTileEntityRenderer(FarmCraftTileEntityTypes.boiling.get(), TileEntityBoilingRenderer::new);
+
     	//Crop render
     	RenderTypeLookup.setRenderLayer(BlockInit.wooden_stick.get(), RenderType.getCutout());
     	RenderTypeLookup.setRenderLayer(BlockInit.strawberry.get(), RenderType.getCutout());
@@ -152,6 +142,8 @@ public class Main {
     	RenderTypeLookup.setRenderLayer(FluidInit.beer_fluid.get(), RenderType.getTranslucent());
     	RenderTypeLookup.setRenderLayer(FluidInit.beer_fluid_flowing.get(), RenderType.getTranslucent());
     	RenderTypeLookup.setRenderLayer(BlockInit.beer_block.get(), RenderType.getTranslucent());
+    	
+    	//RenderTypeLookup.setRenderLayer(BlockInit.boiling_block.get(), RenderType.getCutout());
     	
     	FarmCraftContainerType.registerScreens(event);
     	

@@ -94,7 +94,7 @@ public class JuicerScreen<JuicerContainer extends AbstractJuicerContainer> exten
           */
          
        //this.blit(i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
-         int kk = 13 - k;
+         int kk = 14 - k;
          this.blit(i + 56, j + 36 + 13 - kk, 176, 13 - kk, 14, kk + 1);
       }
 

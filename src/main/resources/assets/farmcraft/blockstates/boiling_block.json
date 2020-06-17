@@ -1,0 +1,31 @@
+{
+    "multipart": [
+		{   "when": { "formed": "unformed"},
+            "apply": { "model": "farmcraft:block/boiling" }
+        },   
+		{   "when": { "formed": "p000"},
+            "apply": { "model": "farmcraft:block/boiling_obj" }
+        },
+		{   "when": { "formed": "p001"},
+            "apply": { "model": "block/air" }
+        },
+		{   "when": { "formed": "p010"},
+            "apply": { "model": "block/air" }
+        },
+		{   "when": { "formed": "p011"},
+        	"apply": { "model": "block/air" }
+    	},
+		{   "when": { "formed": "p100"},
+            "apply": { "model": "block/air" }
+        },
+		{   "when": { "formed": "p101"},
+            "apply": { "model": "block/air" }
+        },
+		{   "when": { "formed": "p110"},
+            "apply": { "model": "block/air" }
+        },
+		{   "when": { "formed": "p111"},
+            "apply": { "model": "block/air" }
+        }
+    ]
+}
